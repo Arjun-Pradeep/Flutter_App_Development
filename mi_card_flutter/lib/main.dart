@@ -12,13 +12,14 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal[900],
         body: SafeArea(
             child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             CircleAvatar(
               radius: 50.0,
               backgroundImage: AssetImage('images/diamond.jpg'),
             ),
             Text(
-              'Angel',
+              'Arjun',
               style: TextStyle(
                   fontFamily: 'Pacifico',
                   fontSize: 40.0,
@@ -34,51 +35,42 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   letterSpacing: 2.5),
             ),
-            Container(
-              padding: EdgeInsets.all(10.0),
-              color: Colors.white,
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-              child: Row(
-                children: <Widget>[
-                  Icon(
-                    Icons.phone,
-                    color: Colors.teal,
-                  ),
-                  SizedBox(
-                    width: 10.0,
-                  ),
-                  Text(
-                    '+91 8009 098 453',
-                    style: TextStyle(
-                        color: Colors.teal,
-                        fontFamily: 'Source Sans Pro',
-                        fontSize: 20.0),
-                  ),
-                ],
+            SizedBox(
+              height: 20.0,
+              width: 150.0,
+              child: Divider(
+                color: Colors.teal[400],
               ),
             ),
-            Container(
-              color: Colors.white,
-              padding: EdgeInsets.all(10.0),
+            Card(
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-              child: Row(
-                children: <Widget>[
-                  Icon(
-                    Icons.email,
-                    color: Colors.teal
-                  ),
-                  SizedBox(
-                    width: 10.0,
-                  ),
-                  Text('angel@em.io',
+              child: ListTile(
+                leading: Icon(
+                  Icons.phone,
+                  color: Colors.teal,
+                ),
+                title: Text(
+                  '+91 8009 098 453',
                   style: TextStyle(
-                    fontSize: 20.0,
-                    color: Colors.teal,
-                    fontFamily: 'Sans Source Pro'
-                  ),)
-                ],
+                      color: Colors.teal,
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20.0),
+                ),
               ),
-            )
+            ),
+            Card(
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+              child: ListTile(
+                leading: Icon(Icons.email, color: Colors.teal),
+                title: Text(
+                  'rjun@em.io',
+                  style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.teal,
+                      fontFamily: 'Sans Source Pro'),
+                ),
+              ),
+            ),
           ],
         )),
       ),
